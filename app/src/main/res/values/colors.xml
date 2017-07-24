@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/darkBlueGray</color>
+    <color name="colorPrimaryDark">@color/darkBlueGray</color>
+    <color name="colorAccent">@color/veryDarkBlueGray</color>
+    <color name="white">#FFFFFF</color>
+    <color name="darkBlueGray">#514e5d</color>
+    <color name="veryDarkBlueGray">#393741</color>
+    <color name="blue_transparent_50">#514e5dF3</color>
+</resources>
