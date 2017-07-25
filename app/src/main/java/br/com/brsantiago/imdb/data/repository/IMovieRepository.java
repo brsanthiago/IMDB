@@ -11,11 +11,11 @@ import io.reactivex.Completable;
  * Created by bruno on 23/07/17.
  */
 
-public interface IMovieRepository {
+public interface IMovieRepository<T> {
 
-    Completable insert(ImdbMovie movie);
+    Completable insert(T t);
 
-    LiveData<List<ImdbMovie>> getMovies();
+    LiveData<List<T>> findAll();
 
-    Completable delete(ImdbMovie movie);
+    Completable delete(T t);
 }

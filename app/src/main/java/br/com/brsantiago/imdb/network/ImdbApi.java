@@ -39,7 +39,7 @@ public class ImdbApi {
 
                         Request original = chain.request();
                         HttpUrl url = original.url().newBuilder()
-                                .addQueryParameter("apikey", "ec6483bd")
+                                .addQueryParameter("apikey", "YOUR_API_HERE")
                                 .addQueryParameter("plot", "full")
                                 .build();
                         Request.Builder requestBuilder = original.newBuilder()

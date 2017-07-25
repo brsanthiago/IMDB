@@ -7,27 +7,24 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.OnConflictStrategy;
 import android.arch.persistence.room.Query;
 import java.util.List;
-import br.com.brsantiago.imdb.model.ImdbMovie;
+import br.com.brsantiago.imdb.model.Sugestion;
 
 /**
- * Created by bruno on 23/07/17.
+ * Created by bruno on 24/07/17.
  */
-
 @Dao
-public interface ImdbMovieDao {
-
-    @Query("SELECT * from movie order by title, year asc")
-    LiveData<List<ImdbMovie>> findAll();
-
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insertAll(List<ImdbMovie> movies);
+public interface SugestionDao {
+    @Query("SELECT * from sugestion order by title, year asc")
+    LiveData<List<Sugestion>> findAll();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    void insert(ImdbMovie movie);
+    void insert(Sugestion sugestion);
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertAll(List<Sugestion> sugestions);
 
     @Delete
-    void delete(ImdbMovie imdbMovie);
-
-    @Query("SELECT * from movie where id = :movieID")
-    LiveData<ImdbMovie> findById(String movieID);
+    void delete(Sugestion sugestions);
+    @Delete
+    void delete(List<Sugestion> sugestions);
 }

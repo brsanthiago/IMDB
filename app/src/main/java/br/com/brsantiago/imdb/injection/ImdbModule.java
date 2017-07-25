@@ -7,6 +7,7 @@ import javax.inject.Singleton;
 import br.com.brsantiago.imdb.ImdbApp;
 import br.com.brsantiago.imdb.data.AppDataBase;
 import br.com.brsantiago.imdb.data.repository.MovieRepository;
+import br.com.brsantiago.imdb.data.repository.SugestionRepository;
 import br.com.brsantiago.imdb.network.ImdbApi;
 import br.com.brsantiago.imdb.network.MovieService;
 import dagger.Module;
@@ -31,6 +32,11 @@ public class ImdbModule {
     @Singleton
     public MovieRepository movieRepository(AppDataBase appDataBase) {
         return new MovieRepository(appDataBase);
+    }
+    @Provides
+    @Singleton
+    public SugestionRepository sugestionRepository(AppDataBase appDataBase) {
+        return new SugestionRepository(appDataBase);
     }
 
     @Provides

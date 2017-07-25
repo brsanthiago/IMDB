@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"    android:id="@+id/movie_detail"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/movie_detail"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -8,17 +9,18 @@
         android:id="@+id/card_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginTop="4dp"
-        card_view:cardCornerRadius="4dp"
-        android:clickable="true"
-        android:background="@color/colorPrimaryDark">
+        android:background="@color/colorPrimaryDark"
+        android:clickable="true">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryDark">
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/colorPrimaryDark"
+            card_view:cardCornerRadius="4dp">
 
             <ImageView
                 android:id="@+id/movie_poster"
@@ -28,14 +30,15 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_movie"/>
+                android:src="@drawable/ic_movie" />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:background="@drawable/item_bg"
-                android:padding="@dimen/activity_horizontal_margin"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_horizontal_margin">
 
                 <TextView
                     android:id="@+id/tv_title"

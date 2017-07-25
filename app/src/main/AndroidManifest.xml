@@ -6,14 +6,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <application
+        android:name=".ImdbApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:name=".ImdbApp"
         android:theme="@style/AppTheme">
         <activity
             android:name=".view.MainActivity"
@@ -28,6 +27,15 @@
         <activity
             android:name=".view.MovieDetailsActivity"
             android:label="@string/title_activity_movie_details"
+            android:parentActivityName=".view.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.brsantiago.imdb.view.MainActivity" />
+        </activity>
+        <activity
+            android:name=".view.AddMovieActivity"
+            android:label="@string/title_activity_add_movie"
             android:parentActivityName=".view.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

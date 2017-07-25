@@ -74,9 +74,6 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.7.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.7.0'
 
-    //Material Dialogs
-    compile "com.afollestad.material-dialogs:core:$rootProject.materialDialogVersion"
-
     testCompile 'junit:junit:4.12'
 
     androidTestCompile 'com.android.support.test:runner:' + rootProject.runnerVersion
